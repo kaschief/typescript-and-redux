@@ -11,6 +11,8 @@ const reducer = (state: number = initialStste, action: Action) => {
       return state - action.payload;
     case ActionType.BANKRUPT:
       return 0;
+    default:
+      return state;
   }
 };
 

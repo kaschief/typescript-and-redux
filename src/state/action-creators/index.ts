@@ -1,4 +1,4 @@
-import { ActionType } from "../action-types";
+import { ActionType } from "../action-types/index";
 import { Dispatch } from "redux";
 import { Action } from "../actions/index";
 
