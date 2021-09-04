@@ -20,11 +20,10 @@ export const widthdrawMoney = (amount: number) => {
   };
 };
 
-export const bankrupt = (amount: number = 0) => {
+export const bankrupt = () => {
   return (dispatch: Dispatch<Action>) => {
     dispatch({
       type: ActionType.BANKRUPT,
-      payload: amount,
     });
   };
 };
