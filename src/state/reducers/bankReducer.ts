@@ -1,9 +1,9 @@
 import { ActionType } from "../action-types";
 import { Action } from "../actions";
 
-const initialStste = 0;
+const initialState = 0;
 
-const reducer = (state: number = initialStste, action: Action) => {
+const reducer = (state: number = initialState, action: Action) => {
   switch (action.type) {
     case ActionType.WITHDRAW:
       return state - action.payload;

@@ -1,17 +1,17 @@
 import React from "react";
 import "./App.css";
-import { useDispatch, useSelector } from "react-redux";
 import { bindActionCreators } from "redux";
-import { actionCreators, State } from "./state";
+import { actionCreators, AppDispatch } from "./state";
+import { useAppDispatch, useAppSelector } from "./state/hooks";
 
 function App() {
-  const dispatch = useDispatch();
+  const dispatch: AppDispatch = useAppDispatch();
 
   const { depositMoney, widthdrawMoney, bankrupt } = bindActionCreators(
     actionCreators,
     dispatch
   );
-  const amount = useSelector((state: State) => state.bank);
+  const amount = useAppSelector((state) => state.bank);
 
   return (
     <div className="App">
